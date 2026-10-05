@@ -46,10 +46,8 @@
 ## **Do nang viem tuy cao theo Atlanta**
 |  **Do nang VTC**    | **Tan suat** (n) | **Ty le** (%) |
 |:--------------------|:----------------:|:-------------:|
-|VTC nhẹ              |        43        |      46.24    |
-|VTC trung bình-nặng  |        35        |      37.63    |
-|VTC nặng             |        12        |      12.90    |
-|NA                   |        3         |      3.23     |
+|VTC trung bình-nặng  |        78        |      83.87    |
+|VTC nặng             |        12        |      16.13    |
 
 ![atlanta](image/atlanta.png)
 
