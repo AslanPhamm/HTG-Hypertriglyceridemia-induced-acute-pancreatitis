@@ -16,19 +16,6 @@ Từ điển này mô tả `Data_viem_tuy_cap.csv` (93 bệnh nhân, 190 cột) 
 
 ---
 
-## Lưu ý quan trọng trước khi phân tích
-
-1. **`mof_tim_*`, `mof_phoi_*`, `mof_than_*` không phải suy cơ quan.** Ba cột này khớp hoàn toàn với ngưỡng nhịp tim, nhịp thở và ure. Xem [mục 5](#5-thang-điểm-độ-nặng-và-hình-ảnh-học).
-2. **`Atlanta_0`, `Atlanta_1` không phải độ nặng Atlanta 2012.** Trong `Data_viem_tuy_cap.csv`, chúng bằng đúng tổng ba cờ `mof_*` (93/93 bệnh nhân) nên có giá trị 0–3, và không thể dùng làm độ nặng. Trong `Data_tong_hop.csv`, 3 ca `Atlanta_0 = 0` (STT 11, 55, 73) đã được gán lại thành mức 3.
-3. **`sofa_0` thấp hơn SOFA trong luận án đúng 3 điểm.** Xem [mục 8](#8-đối-chiếu-csv-với-luận-án).
-4. **Số tử vong:** CSV có 6 ca, luận án có 4 ca.
-5. **`dich_bu` là giá trị tính ra, không phải thể tích dịch đo được:** `dich_bu = 0,048 × can_nang`.
-6. **`tg_2`, `sofa_2`, `apache_ii_2` không phải đo lần 2 ở 80 bệnh nhân TPE 1 lần.** Chỉ phân tích `_2` ở 13 bệnh nhân có `so_lan_pex = 2`.
-7. **`apa_giam...188` và `apa_giam...189` là mức giảm TG, không phải APACHE II.**
-8. **Chỉ 60/93 bệnh nhân có dữ liệu bổ sung ghép được.** Cột `bs_*` trống ở 33 ca còn lại. Xem [mục 9](#9-dữ-liệu-bổ-sung-chưa-có-trong-csv).
-
----
-
 ## 1. Nhân khẩu học và thể trạng
 
 | Biến | Loại | Đơn vị / Mã hóa | Định nghĩa | Nguồn |
@@ -360,3 +347,16 @@ Các bảng dữ liệu này có thể không phải bản gốc đã dùng đ�
 - **LA:** theo định nghĩa trong luận án, chưa kiểm chứng được trên dữ liệu.
 - **Suy luận:** suy ra từ khoảng giá trị.
 - **Chưa rõ:** cần xác nhận với tác giả.
+
+---
+
+## Lưu ý quan trọng trước khi phân tích
+
+1. **`mof_tim_*`, `mof_phoi_*`, `mof_than_*` không phải suy cơ quan.** Ba cột này khớp hoàn toàn với ngưỡng nhịp tim, nhịp thở và ure. Xem [mục 5](#5-thang-điểm-độ-nặng-và-hình-ảnh-học).
+2. **`Atlanta_0`, `Atlanta_1` không phải độ nặng Atlanta 2012.** Trong `Data_viem_tuy_cap.csv`, chúng bằng đúng tổng ba cờ `mof_*` (93/93 bệnh nhân) nên có giá trị 0–3, và không thể dùng làm độ nặng. Trong `Data_tong_hop.csv`, 3 ca `Atlanta_0 = 0` (STT 11, 55, 73) đã được gán lại thành mức 3.
+3. **`sofa_0` thấp hơn SOFA trong luận án đúng 3 điểm.** Xem [mục 8](#8-đối-chiếu-csv-với-luận-án).
+4. **Số tử vong:** CSV có 6 ca, luận án có 4 ca.
+5. **`dich_bu` là giá trị tính ra, không phải thể tích dịch đo được:** `dich_bu = 0,048 × can_nang`.
+6. **`tg_2`, `sofa_2`, `apache_ii_2` không phải đo lần 2 ở 80 bệnh nhân TPE 1 lần.** Chỉ phân tích `_2` ở 13 bệnh nhân có `so_lan_pex = 2`.
+7. **`apa_giam...188` và `apa_giam...189` là mức giảm TG, không phải APACHE II.**
+8. **Chỉ 60/93 bệnh nhân có dữ liệu bổ sung ghép được.** Cột `bs_*` trống ở 33 ca còn lại. Xem [mục 9](#9-dữ-liệu-bổ-sung-chưa-có-trong-csv).
