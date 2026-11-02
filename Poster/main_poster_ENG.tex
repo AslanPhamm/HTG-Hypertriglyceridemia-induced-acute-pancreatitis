@@ -1,0 +1,171 @@
+\documentclass[a0paper, portrait, final, fontscale=0.3]{baposter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage{graphicx,calc}
+\usepackage{amsmath,amssymb}
+\usepackage{relsize}
+\usepackage{multirow,multicol}
+\usepackage{rotating,enumerate,floatflt}
+\usepackage{bm,url,booktabs}
+
+\usepackage{palatino}
+
+\newcommand{\captionfont}{\footnotesize}
+\graphicspath{{images/}{../images/}}
+\usetikzlibrary{calc}
+
+\setlength{\columnsep}{1.5em}
+\setlength{\columnseprule}{0mm}
+
+\newcommand{\compresslist}{%
+	\setlength{\itemsep}{1pt}%
+	\setlength{\parskip}{0pt}%
+	\setlength{\parsep}{0pt}%
+}
+
+\definecolor{boxblue}{RGB}{0, 71, 146}
+
+\begin{document}
+
+	% ============================================================
+	% POSTER
+	% ============================================================
+
+	\begin{poster}%
+		{
+			grid=false,
+			colspacing=0.8em,
+			% Color style
+			headerColorOne = boxblue,
+			borderColor=boxblue,
+			% Format of textbox
+			textborder=faded,
+			% Format of text header
+			headerborder=open,
+			headerfont = \color{white}\bfseries\Large,
+			headershape=roundedright,
+			headershade=plain,
+			background=none,
+			bgColorOne=white,
+			headerheight=0.10\textheight
+		}
+		% Logo HCMUS
+		{
+			\includegraphics[height = 8.0 em]{Logo Đơn.png}
+		}
+		% Title
+		{\Huge \textbf{Title}}
+		% Authors
+		{ \Large Author 1, Author 2, \\
+			\large Authors' Affiliation \\
+		}
+		% Logo Khoa Toán - Tin HCMUS
+		{
+			\includegraphics[height = 8.0 em]{LOGO KHOA - ĐỨNG - KHÔNG NỀN.png}
+		}\\
+
+		% ============================================================
+		% PROBLEM
+		% ============================================================
+
+		\headerbox{Problem}{name=problem,column=0,row=0}{
+
+			% Add research problem content here.
+
+			\begin{itemize}
+				\item Content 1
+				\item Content 2
+				\item Content 3
+			\end{itemize}
+			~\\~\\~\\~\\~\\~\\~\\~
+
+		}
+
+		% ============================================================
+		% METHODOLOGY
+		% ============================================================
+
+		\headerbox{Methodology}{name=method,column=1,span=2,row=0}{
+
+			% Add research methodology content here.
+
+			\begin{itemize}
+				\item Data
+				\item Method
+				\item Model
+			\end{itemize}
+
+			% Can add figures, formulas, diagrams here.
+			~\\~\\~\\~\\~\\~\\~\\~
+
+
+		}
+
+		% ============================================================
+		% RESULTS
+		% ============================================================
+
+		\headerbox{Results}{name=result,column=0,span=3,row=0,below=method}{
+
+			% Add results content here.
+
+			\begin{itemize}
+				\item Result 1
+				\item Result 2
+				\item Result 3
+			\end{itemize}
+			% Can add tables, figures, charts here.
+			~\\~\\~\\~\\~\\~\\~\\~
+		}
+
+		% ============================================================
+		% CONCLUSION
+		% ============================================================
+
+		\headerbox{Conclusion}{name=conclusion,column=0,span=2,row=0,below=result}{
+
+			% Add conclusion content here.
+
+			\begin{itemize}
+				\item Main conclusion
+				\item Research contributions
+				\item Limitations
+				\item Future work
+			\end{itemize}
+
+		}
+
+		% ============================================================
+		% REFERENCES
+		% ============================================================
+
+		\headerbox{References}{name=ref,column=2,span=1,row=0,below=result}{
+
+			% Add references here.
+
+			\smaller
+			\renewcommand{\refname}{\vspace{-1ex}}
+			\begin{thebibliography}{9}
+
+				\bibitem{ref1}
+				Author.
+				\emph{Document title}.
+				Publisher, year.
+
+				\bibitem{ref2}
+				Author.
+				\emph{Article title}.
+				Journal name, year.
+
+			\end{thebibliography}
+
+		}
+
+		% ============================================================
+
+	\end{poster}
+
+\end{document}

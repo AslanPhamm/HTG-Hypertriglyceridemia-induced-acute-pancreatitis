@@ -1,0 +1,171 @@
+\documentclass[a0paper, portrait, final, fontscale=0.3]{baposter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+
+\usepackage{graphicx,calc}
+\usepackage{amsmath,amssymb}
+\usepackage{relsize}
+\usepackage{multirow,multicol}
+\usepackage{rotating,enumerate,floatflt}
+\usepackage{bm,url,booktabs}
+
+\usepackage{palatino}
+
+\newcommand{\captionfont}{\footnotesize}
+\graphicspath{{images/}{../images/}}
+\usetikzlibrary{calc}
+
+\setlength{\columnsep}{1.5em}
+\setlength{\columnseprule}{0mm}
+
+\newcommand{\compresslist}{%
+	\setlength{\itemsep}{1pt}%
+	\setlength{\parskip}{0pt}%
+	\setlength{\parsep}{0pt}%
+}
+
+\definecolor{boxblue}{RGB}{0, 71, 146}
+
+\begin{document}
+
+	% ============================================================
+	% POSTER
+	% ============================================================
+
+	\begin{poster}%
+		{
+			grid=false,
+			colspacing=0.8em,
+			% Color style
+			headerColorOne = boxblue,
+			borderColor=boxblue,
+			% Format of textbox
+			textborder=faded,
+			% Format of text header
+			headerborder=open,
+			headerfont = \color{white}\bfseries\Large,
+			headershape=roundedright,
+			headershade=plain,
+			background=none,
+			bgColorOne=white,
+			headerheight=0.10\textheight
+		}
+		% Logo HCMUS
+		{
+			\includegraphics[height = 8.0 em]{Logo Đơn.png}
+		}
+		% Tiêu đề
+		{\Huge \textbf{Tiêu Đề}}
+		% Tác giả
+		{ \Large Tên tác giả 1, Tên tác giả 2, \\
+			\large Cơ quan làm việc của tác giả \\
+		}
+		% Logo Khoa Toán - Tin HCMUS
+		{
+			\includegraphics[height = 8.0 em]{LOGO KHOA - ĐỨNG - KHÔNG NỀN.png}
+		}\\
+
+		% ============================================================
+		% VẤN ĐỀ
+		% ============================================================
+
+		\headerbox{Vấn đề}{name=problem,column=0,row=0}{
+
+			% Thêm nội dung vấn đề nghiên cứu tại đây.
+
+			\begin{itemize}
+				\item Nội dung 1
+				\item Nội dung 2
+				\item Nội dung 3
+			\end{itemize}
+			~\\~\\~\\~\\~\\~\\~\\~
+
+		}
+
+		% ============================================================
+		% PHƯƠNG PHÁP NGHIÊN CỨU
+		% ============================================================
+
+		\headerbox{Phương pháp nghiên cứu}{name=method,column=1,span=2,row=0}{
+
+			% Thêm nội dung phương pháp nghiên cứu tại đây.
+
+			\begin{itemize}
+				\item Dữ liệu
+				\item Phương pháp
+				\item Mô hình
+			\end{itemize}
+
+			% Có thể thêm hình, công thức, sơ đồ tại đây.
+			~\\~\\~\\~\\~\\~\\~\\~
+
+
+		}
+
+		% ============================================================
+		% KẾT QUẢ
+		% ============================================================
+
+		\headerbox{Kết quả}{name=result,column=0,span=3,row=0,below=method}{
+
+			% Thêm nội dung kết quả tại đây.
+
+			\begin{itemize}
+				\item Kết quả 1
+				\item Kết quả 2
+				\item Kết quả 3
+			\end{itemize}
+			% Có thể thêm bảng, hình, biểu đồ tại đây.
+			~\\~\\~\\~\\~\\~\\~\\~
+		}
+
+		% ============================================================
+		% KẾT LUẬN
+		% ============================================================
+
+		\headerbox{Kết luận}{name=conclusion,column=0,span=2,row=0,below=result}{
+
+			% Thêm nội dung kết luận tại đây.
+
+			\begin{itemize}
+				\item Kết luận chính
+				\item Đóng góp của nghiên cứu
+				\item Hạn chế
+				\item Hướng nghiên cứu tiếp theo
+			\end{itemize}
+
+		}
+
+		% ============================================================
+		% TÀI LIỆU THAM KHẢO
+		% ============================================================
+
+		\headerbox{Tài liệu tham khảo}{name=ref,column=2,span=1,row=0,below=result}{
+
+			% Thêm tài liệu tham khảo tại đây.
+
+			\smaller
+			\renewcommand{\refname}{\vspace{-1ex}}
+			\begin{thebibliography}{9}
+
+				\bibitem{ref1}
+				Tác giả.
+				\emph{Tên tài liệu}.
+				Nhà xuất bản, năm.
+
+				\bibitem{ref2}
+				Tác giả.
+				\emph{Tên bài báo}.
+				Tên tạp chí, năm.
+
+			\end{thebibliography}
+
+		}
+
+		% ============================================================
+
+	\end{poster}
+
+\end{document}
