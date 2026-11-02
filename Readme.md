@@ -19,7 +19,6 @@ Từ điển này mô tả `Data_viem_tuy_cap.csv` (93 bệnh nhân, 190 cột) 
 | `Data_tong_hop.csv` | **Bộ dữ liệu tổng hợp để phân tích:** 93 bệnh nhân, 359 cột, gồm toàn bộ CSV, các cột nhãn chữ và cột `bs_*` của 60 bệnh nhân ghép được |
 | `Bo_sung_an_danh.csv` | Toàn bộ dữ liệu bổ sung đã ẩn danh: 93 bệnh nhân, 166 cột. Dùng cho thống kê chung của cả 93 ca |
 | `Data_viem_tuy_cap.csv` | Bộ dữ liệu ban đầu; các mục 1–7 mô tả các cột của file này |
-| `Data_viem_tuy_cap.xlsx` | Bản Excel của CSV |
 | `Luận án 29.3.2025.final.pdf` | Định nghĩa biến, quy trình TPE, các bảng kết quả |
 
 Các bảng dữ liệu này có thể không phải bản gốc đã dùng để viết luận án, nên chênh lệch với luận án ở [mục 8](#8-đối-chiếu-csv-với-luận-án) là điều cần lưu ý khi diễn giải.
@@ -37,7 +36,7 @@ Các bảng dữ liệu này có thể không phải bản gốc đã dùng đ�
 ## Lưu ý quan trọng trước khi phân tích
 
 1. **`mof_tim_*`, `mof_phoi_*`, `mof_than_*` không phải suy cơ quan.** Ba cột này khớp hoàn toàn với ngưỡng nhịp tim, nhịp thở và ure. Xem [mục 5](#5-thang-điểm-độ-nặng-và-hình-ảnh-học).
-2. **`Atlanta_0`, `Atlanta_1` không phải độ nặng Atlanta 2012.** Chúng bằng đúng tổng ba cờ `mof_*` (93/93 bệnh nhân) nên có giá trị 0–3, và không thể dùng làm độ nặng.
+2. **`Atlanta_0`, `Atlanta_1` không phải độ nặng Atlanta 2012.** Trong `Data_viem_tuy_cap.csv`, chúng bằng đúng tổng ba cờ `mof_*` (93/93 bệnh nhân) nên có giá trị 0–3, và không thể dùng làm độ nặng. Trong `Data_tong_hop.csv`, 3 ca `Atlanta_0 = 0` (STT 11, 55, 73) đã được gán lại thành mức 3.
 3. **`sofa_0` thấp hơn SOFA trong luận án đúng 3 điểm.** Xem [mục 8](#8-đối-chiếu-csv-với-luận-án).
 4. **Số tử vong:** CSV có 6 ca, luận án có 4 ca.
 5. **`dich_bu` là giá trị tính ra, không phải thể tích dịch đo được:** `dich_bu = 0,048 × can_nang`.
@@ -198,7 +197,9 @@ Bảng dưới gộp các mốc đo của cùng một xét nghiệm. Số trong 
 
 Các ngưỡng trên được suy ra từ dữ liệu, chưa rõ ý nghĩa lâm sàng. Chúng không phải định nghĩa suy cơ quan Marshall (PaO₂/FiO₂, creatinine, huyết áp) và `Atlanta_0` không phân loại nhẹ / trung bình-nặng / nặng.
 
-Bảng 3.4 của luận án báo cáo 78 ca trung bình-nặng và 15 ca nặng. Các con số này trùng với `Atlanta_0` thuộc {1, 2} và {0, 3}, nhưng nhóm {0, 3} gồm cả 3 ca không có cờ nào, nên khó có thể là định nghĩa thật của nhóm nặng. Hiện chưa có file nào cho biết độ nặng Atlanta thật của từng bệnh nhân.
+Bảng 3.4 của luận án báo cáo 78 ca trung bình-nặng và 15 ca nặng. Các con số này trùng với `Atlanta_0` gốc thuộc {1, 2} và {0, 3}. `Data_tong_hop.csv` theo cách gộp này: 3 ca gốc bằng 0 (STT 11, 55, 73) được gán lại thành mức 3, cho 43 / 35 / 15 ca ở mức 1 / 2 / 3. Giá trị gốc vẫn còn trong `Data_viem_tuy_cap.csv`.
+
+Việc gán lại này chỉ để khớp số của luận án. Ba ca đó không có cờ nào, nên khó có thể là định nghĩa thật của nhóm nặng. Hiện chưa có file nào cho biết độ nặng Atlanta thật của từng bệnh nhân.
 
 **Hình ảnh học**
 
@@ -327,7 +328,7 @@ Mã hóa: `1`: Có; `2`: Không (khác với mã `0`/`1` của CSV), trừ `bs_g
 
 ## 10. Xử lý dữ liệu đề xuất
 
-`Data_tong_hop.csv` đã bỏ `Unnamed: 0`, đã làm sạch `billirubin_tp_0`, `ca_1`, và thêm các cột nhãn chữ `nghe_nghiep_ten`, `machine_1_ten`, `loai_qua_loc_1_ten`, `PP_PEX1_ten`, `balthazar_0_do`. Các giá trị còn lại của CSV được giữ nguyên.
+`Data_tong_hop.csv` đã bỏ `Unnamed: 0`, đã làm sạch `billirubin_tp_0`, `ca_1`, và thêm các cột nhãn chữ `nghe_nghiep_ten`, `machine_1_ten`, `loai_qua_loc_1_ten`, `PP_PEX1_ten`, `balthazar_0_do`, và gán lại `Atlanta_0 = 0` thành `3` ở STT 11, 55, 73. Các giá trị còn lại của CSV được giữ nguyên.
 
 Việc còn lại:
 
