@@ -1,16 +1,16 @@
-# Viêm tụy cấp do tăng triglyceride được thay huyết tương: từ điển dữ liệu
-
-Từ điển này mô tả `Data_viem_tuy_cap.csv` (93 bệnh nhân, 190 cột) dùng cho luận án *thay huyết tương (TPE) trong viêm tụy cấp do tăng triglyceride*.
+# Application of Multivariate Statistical Analysis in Risk Prediction and Efficacy Evaluation of Plasma Exchange in Hypertriglyceridemia-Induced Acute Pancreatitis.
 
 **Cỡ mẫu:** 93 bệnh nhân, 59 TPE bằng albumin 5% và 34 bằng FFP.
 
-**Thiết kế (theo luận án):** quan sát, tiến cứu, 6/2018 – 6/2023, tại khoa Hồi sức cấp cứu BV Chợ Rẫy và khoa Hồi sức tích cực BV Đại học Y Dược TP.HCM.
+**Thiết kế :** quan sát, tiến cứu, 6/2018 – 6/2023, tại khoa Hồi sức cấp cứu BV Chợ Rẫy và khoa Hồi sức tích cực BV Đại học Y Dược TP.HCM.
 
-**Tiêu chuẩn chọn:** ≥ 18 tuổi, TG nhập viện ≥ 1000 mg/dL, APACHE II ≥ 8, được TPE. Cả 93 bệnh nhân đều đạt ngưỡng TG và APACHE II trong CSV.
+**Tiêu chuẩn chọn:** ≥ 18 tuổi, TG nhập viện ≥ 1000 mg/dL, APACHE II ≥ 8, được TPE.
 
 **Tiêu chuẩn loại:** đã TPE ở tuyến trước, hoặc bệnh nhân/gia đình không đồng ý TPE.
 
 **Mốc thời gian:** hậu tố `_0` là lúc nhập viện hoặc trước TPE lần 1 (TG lấy lại nếu chờ TPE > 6 giờ, xét nghiệm khác nếu > 12 giờ). Hậu tố `_1` là sau TPE lần 1 và `_2` là sau TPE lần 2 (lấy trong vòng 1–2 giờ sau TPE).
+
+**Ket qua chinh**
 
 ![Image](./image/main.png)
 
