@@ -14,25 +14,6 @@ Từ điển này mô tả `Data_viem_tuy_cap.csv` (93 bệnh nhân, 190 cột) 
 
 ![Image](./image/main.png)
 
-**Các file:**
-
-| File | Vai trò |
-| :--- | :--- |
-| `Data_tong_hop.csv` | **Bộ dữ liệu tổng hợp để phân tích:** 93 bệnh nhân, 359 cột, gồm toàn bộ CSV, các cột nhãn chữ và cột `bs_*` của 60 bệnh nhân ghép được |
-| `Bo_sung_an_danh.csv` | Toàn bộ dữ liệu bổ sung đã ẩn danh: 93 bệnh nhân, 166 cột. Dùng cho thống kê chung của cả 93 ca |
-| `Data_viem_tuy_cap.csv` | Bộ dữ liệu ban đầu; các mục 1–7 mô tả các cột của file này |
-| `Luận án 29.3.2025.final.pdf` | Định nghĩa biến, quy trình TPE, các bảng kết quả |
-
-Các bảng dữ liệu này có thể không phải bản gốc đã dùng để viết luận án, nên chênh lệch với luận án ở [mục 8](#8-đối-chiếu-csv-với-luận-án) là điều cần lưu ý khi diễn giải.
-
-**Ký hiệu cột "Nguồn":**
-
-- **DL:** đã kiểm chứng trực tiếp trên dữ liệu, quy tắc đúng ở cả 93 bệnh nhân nếu không ghi chú khác.
-- **Gốc:** giải mã từ bảng dữ liệu nguồn có tên cột và mã hóa dạng chữ. Bảng này chỉ khác CSV ở 3 ô (`billirubin_tp_0`, `billirubin_tt_0` ở STT 25; `apa_giam...187` ở STT 31) và CSV được giữ làm chuẩn.
-- **LA:** theo định nghĩa trong luận án, chưa kiểm chứng được trên dữ liệu.
-- **Suy luận:** suy ra từ khoảng giá trị.
-- **Chưa rõ:** cần xác nhận với tác giả.
-
 ---
 
 ## Lưu ý quan trọng trước khi phân tích
@@ -358,3 +339,24 @@ Việc còn lại:
 - **CTSI (Balthazar):** điểm viêm (A = 0, B = 1, C = 2, D = 3, E = 4) cộng điểm hoại tử (không = 0, < 30% = 2, 30–50% = 4, > 50% = 6). Phân nhóm: 0–3 nhẹ, 4–6 trung bình, 7–10 nặng.
 - **Marshall hiệu chỉnh (suy cơ quan khi ≥ 2 điểm):** PaO₂/FiO₂ ≤ 300; creatinine ≥ 1,9 mg/dL; HATT < 90 mmHg không đáp ứng dịch.
 - **Atlanta 2012:** nhẹ: không suy cơ quan, không biến chứng; trung bình-nặng: suy cơ quan thoáng qua ≤ 48 giờ và/hoặc biến chứng; nặng: suy cơ quan kéo dài > 48 giờ.
+
+---
+
+**Các file:**
+
+| File | Vai trò |
+| :--- | :--- |
+| `Data_tong_hop.csv` | **Bộ dữ liệu tổng hợp để phân tích:** 93 bệnh nhân, 359 cột, gồm toàn bộ CSV, các cột nhãn chữ và cột `bs_*` của 60 bệnh nhân ghép được |
+| `Bo_sung_an_danh.csv` | Toàn bộ dữ liệu bổ sung đã ẩn danh: 93 bệnh nhân, 166 cột. Dùng cho thống kê chung của cả 93 ca |
+| `Data_viem_tuy_cap.csv` | Bộ dữ liệu ban đầu; các mục 1–7 mô tả các cột của file này |
+| `Luận án 29.3.2025.final.pdf` | Định nghĩa biến, quy trình TPE, các bảng kết quả |
+
+Các bảng dữ liệu này có thể không phải bản gốc đã dùng để viết luận án, nên chênh lệch với luận án ở [mục 8](#8-đối-chiếu-csv-với-luận-án) là điều cần lưu ý khi diễn giải.
+
+**Ký hiệu cột "Nguồn":**
+
+- **DL:** đã kiểm chứng trực tiếp trên dữ liệu, quy tắc đúng ở cả 93 bệnh nhân nếu không ghi chú khác.
+- **Gốc:** giải mã từ bảng dữ liệu nguồn có tên cột và mã hóa dạng chữ. Bảng này chỉ khác CSV ở 3 ô (`billirubin_tp_0`, `billirubin_tt_0` ở STT 25; `apa_giam...187` ở STT 31) và CSV được giữ làm chuẩn.
+- **LA:** theo định nghĩa trong luận án, chưa kiểm chứng được trên dữ liệu.
+- **Suy luận:** suy ra từ khoảng giá trị.
+- **Chưa rõ:** cần xác nhận với tác giả.
