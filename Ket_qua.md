@@ -43,7 +43,7 @@
 ![bmi2](image/bmi2.png)
 **Co 1 mau outlier can nang 174kg, cao 160cm**
 
-## **Do nang viem tuy cao theo Atlanta**
+## **Do nang viem tuy cap theo Atlanta**
 |  **Do nang VTC**    | **Tan suat** (n) | **Ty le** (%) |
 |:--------------------|:----------------:|:-------------:|
 |VTC trung bình-nặng  |        78        |      83.87    |
@@ -65,4 +65,17 @@
 
 ![time](image/gio_khoi_phat.png)
 
+## **Dac diem lam sang thoi diem nhap vien**
+|**Đặc điểm lâm sàng**| **n (%)** |
+|:--------------------|:------------------:|
+|__Co nang__||
+|Đau bụng|85 (91.4%)|
+|Buồn nôn hoặc nôn|48 (51.6%)|
+|Chướng bụng|?|
+|Sốt|11 (11.8%)|
+|__Thuc the__||
+|Đề kháng thành bụng|?|
+|Cảm ứng phúc mạc|27 (29.0%)|
+|Dấu Cullen / Grey Turner|20 (21.5%)|
+|Tràn dịch màng phổi|28 (30.1%)|
 
