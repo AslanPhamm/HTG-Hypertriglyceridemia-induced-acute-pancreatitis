@@ -12,6 +12,8 @@ Từ điển này mô tả `Data_viem_tuy_cap.csv` (93 bệnh nhân, 190 cột) 
 
 **Mốc thời gian:** hậu tố `_0` là lúc nhập viện hoặc trước TPE lần 1 (TG lấy lại nếu chờ TPE > 6 giờ, xét nghiệm khác nếu > 12 giờ). Hậu tố `_1` là sau TPE lần 1 và `_2` là sau TPE lần 2 (lấy trong vòng 1–2 giờ sau TPE).
 
+![Image](./image/main.png)
+
 **Các file:**
 
 | File | Vai trò |
