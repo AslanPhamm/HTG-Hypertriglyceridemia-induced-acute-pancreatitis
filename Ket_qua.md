@@ -43,6 +43,18 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 - **Nhóm so sánh:** albumin 5% / FFP theo `PP_PEX1`; nặng (`Atlanta_0` = 3) / trung bình-nặng (`Atlanta_0` = 1, 2).
 - **Nguồn dữ liệu:** biến CSV dùng 93 ca. Biến `bs_*` so sánh theo nhóm chỉ dùng 60 ca đã ghép. Thống kê chung của biến bổ sung dùng toàn bộ 93 ca trong `Bo_sung_an_danh.csv`.
 
+![Quy trình phân tích thống kê](image/poster/f0_pipeline.png)
+
+*Hình M1. Sáu bước áp dụng cho toàn bộ phân tích trong file này. Phép kiểm ở bước 3 và 4 chọn theo kết quả kiểm định phân phối ở bước 2.*
+
+![Sơ đồ thiết kế nghiên cứu](image/poster/f00_study_design.png)
+
+*Hình M2. Thiết kế: 93 ca, phân nhóm theo dịch thay thế ở lần TPE đầu tiên — do bác sĩ chỉ định, không ngẫu nhiên — và ba kết cục đánh giá.*
+
+![Kiểm định phân phối](image/poster/f1_distribution.png)
+
+*Hình M3. Kolmogorov–Smirnov hiệu chỉnh Lilliefors, p mô phỏng 5 000 lần. 12/18 biến định lượng lệch chuẩn (TG là ví dụ điển hình, p < 0.001; tuổi là biến chuẩn, p = 0.32), nên phép kiểm phi tham số là lựa chọn mặc định.*
+
 ## 3.1. Đặc điểm chung nhóm nghiên cứu
 
 ### Bảng 3.1. Phân bố theo tuổi (dữ liệu: nam 64, nữ 29; luận án: nam 66, nữ 27)
@@ -297,6 +309,14 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 
 *Luận án ghi phép kiểm Wilcoxon rank-sum cho bảng này; ở đây dùng χ²/Fisher theo mục 2.8 vì biến là nhị giá.*
 
+![Dấu hiệu nguy cơ theo độ nặng](image/poster/f2_severity_profile.png)
+
+*Hình 3.17a. Tỉ lệ các dấu hiệu nguy cơ ở nhóm nặng (n = 15) so với trung bình–nặng (n = 78), kèm p của từng so sánh.*
+
+![Phân tích đơn biến: OR và KTC 95%](image/poster/f3_forest_univariate.png)
+
+*Hình 3.17b. OR thô (KTC 95%, thang log) của 12 yếu tố lúc nhập viện, gộp từ các Bảng 3.12–3.17. Chỉ ba yếu tố có KTC không chứa 1: urê > 20 mg/dL (OR 8.41), BISAP ≥ 3 (6.30), SOFA ≥ 7 (4.00). Mọi KTC đều rất rộng — hệ quả trực tiếp của 15 biến cố.*
+
 ### Bảng 3.18A. Hồi quy logistic đa biến, không có SIRI (n = 93, 15 biến cố, R² Nagelkerke = 0.19)
 
 |Đặc tính              |p hiệu chỉnh |OR hiệu chỉnh (KTC 95%) |Luận án (p; OR)         |
@@ -323,6 +343,10 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 *SIRI chỉ có ở ca đã ghép nên mô hình B chỉ có ít biến cố cho 7 biến; kết quả không ổn định và chỉ để đối chiếu. Luận án báo cáo khả năng giải thích 45%.*
 
 *`Atlanta_0` được tính từ nhịp tim, nhịp thở và ure, trong khi `s_0` dùng nhịp tim, nhịp thở và `b_0` của BISAP dùng ure. Biến kết cục và biến dự báo trùng thành phần, nên liên quan với SIRS, BISAP không nên diễn giải là khả năng tiên lượng.*
+
+![Hồi quy logistic đa biến](image/poster/f4_forest_multivariable.png)
+
+*Hình 3.18. OR hiệu chỉnh (KTC 95%, thang log) của hai mô hình ở Bảng 3.18A và 3.18B. Mô hình A (n = 93; 15 biến cố): chỉ BISAP ≥ 3 giữ ý nghĩa, OR 5.68 (1.33–24.27), R² Nagelkerke = 0.19. Mô hình B thêm SIRI (n = 58; 9 biến cố): không biến nào có ý nghĩa. Số biến cố trên mỗi biến số chỉ 2.5 và 1.3, thấp hơn nhiều ngưỡng 10 của Peduzzi.*
 
 ## 3.4. Kết quả thay huyết tương
 
@@ -420,6 +444,10 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 
 *`tg_giam` dùng `tg_NV − tg_1` ở 89 ca và `tg_NV − tg_2` ở 4 ca. Luận án ghi sau TPE lần 1 là 591.5 và 619.5 ở Bảng 3.21, 3.23 nhưng 755.8 và 863.8 ở Bảng 3.25; dữ liệu chỉ khớp số của Bảng 3.25.*
 
+![Triglyceride trước và sau TPE lần 1](image/poster/f5_paired_tg.png)
+
+*Hình 3.25. (a) TG trước – sau TPE lần 1 của từng bệnh nhân, thang log; đường đậm là trung bình nhóm. (b) Phân bố tỉ lệ giảm TG theo dịch thay thế. Wilcoxon bắt cặp p < 0.001 ở cả hai nhóm; so sánh giữa hai nhóm p = 0.165.*
+
 ### Biểu đồ 3.3 - 3.8. Thay đổi APACHE II, SOFA, BISAP sau TPE
 
 |Thang điểm |Nhóm       |Giai đoạn                               |Trước → sau             |p      |Kiểm định    |p t cặp |Luận án                         |
@@ -444,6 +472,10 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 *SOFA sau TPE của luận án (2.6; 4.7) khớp `sofa_1`, nhưng SOFA trước TPE (6.4; 8.5) bằng `sofa_0` + 3. Vì vậy mức giảm SOFA trong luận án lớn hơn dữ liệu khoảng 3 điểm.*
 
 *Ở ca TPE 1 lần, `apache_ii_2` và phần lớn `sofa_2` chép lại giá trị `_1`. Số 8.9 của luận án khớp với cách tính gồm cả các ca chép lại.*
+
+![Thay đổi thang điểm sau TPE lần 1](image/poster/f6_scores_dumbbell.png)
+
+*Hình 3.3–3.8. Thay đổi trung bình của APACHE II, SOFA và BISAP sau TPE lần 1, tách theo dịch thay thế (Wilcoxon bắt cặp). Mỗi thang điểm có trục riêng vì khoảng giá trị rất khác nhau.*
 
 ## 3.4.8. Biến cố liên quan đến thay huyết tương
 
@@ -522,6 +554,10 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 - **Không kết luận được TPE lần 2 kém hơn lần 1.** Cả 13 ca đều được chọn vì TG còn ≥ 1000 mg/dL sau lần 1. Trong 10 ca dùng cùng một dịch, tỉ lệ giảm ở nhóm albumin là 43.5% → 64.1% (p = 0.296), FFP là 76.3% → 72.6% (p = 0.625). Mức giảm mg/dL ở lần 2 thấp hơn, phù hợp với việc TG đầu vào đã thấp hơn.
 - **Giới hạn:** dịch không được phân ngẫu nhiên; lần 2 chỉ có 13 ca nên KTC của hiệu số rất rộng (−13.3 đến 16.0 điểm %), không đủ để khẳng định hai dịch tương đương. Dữ liệu có 2 cặp nghi trùng bệnh nhân và 2 ca giảm dưới 10% ở lần 1 cần đối chiếu hồ sơ gốc (Bảng F).
 
+![Đa so sánh giữa hai nhóm dịch](image/poster/f9_pvalue_strip.png)
+
+*Hình PS1. Toàn bộ 33 kiểm định so sánh albumin 5% với FFP, xếp theo nhóm biến, trục p thang log. Cả 10 kiểm định có p < 0.05 đều thuộc nhóm đặc điểm nền và thông số quy trình (SOFA, APACHE II, CRRT, Qr, BMI, thể tích thay, creatinin); 7 trong số đó còn ý nghĩa sau hiệu chỉnh Benjamini–Hochberg. Không một chỉ số hiệu quả giảm TG nào đạt p < 0.05.*
+
 ### Bảng A. TG lần 1, albumin 5% (n = 59) và FFP (n = 34)
 
 |Chỉ số                               |Albumin 5%                |FFP                       |Hiệu FFP − albumin (KTC 95%) |p     |Kiểm định |Luận án (albumin; FFP; p)                                       |
@@ -537,6 +573,10 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 |Cần TPE lần 2, n (%)                 |8 (13.6)                  |5 (14.7)                  |–                            |1.000 |Fisher    |–                                                               |
 
 *Mỗi ô là trung bình (min – max). Tỉ lệ giảm tính cho từng bệnh nhân rồi lấy trung bình. Tốc độ theo giờ dùng `thoi_gian_loc_1`, cột này được làm tròn và 79/93 ca ghi 3 giờ.*
+
+![Tỉ lệ giảm TG và KTC của hiệu số](image/poster/f7_reduction_compare.png)
+
+*Hình A. (a) Tỉ lệ giảm TG trung bình (KTC 95%) theo dịch thay thế ở ba mốc: TPE lần 1, TPE lần 2 và chung. (b) Hiệu số FFP − albumin kèm KTC 95%; cả ba KTC đều chứa 0.*
 
 ### Bảng B. TG lần 2, theo dịch thực dùng ở lần 2: albumin 5% (n = 7) và FFP (n = 6)
 
@@ -603,6 +643,12 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 
 *Bệnh viện và lựa chọn dịch không độc lập, loại máy chỉ là đại diện một phần cho bệnh viện. Không làm mô hình cho lần 2 vì chỉ có 13 ca và không có thể tích thay lần 2.*
 
+![Hiệu chỉnh yếu tố gây nhiễu](image/poster/f8_adjusted.png)
+
+*Hình E. Tỉ số TG còn lại FFP/albumin ở ba mô hình log-tuyến tính, kèm KTC 95% và R². Hiệu chỉnh TG ban đầu và lượng dịch thay đưa tỉ số từ 0.79 về 0.87 và R² từ 0.03 lên 0.27: phần lớn khác biệt thô là do TG ban đầu, không do loại dịch. Cả ba KTC đều chứa 1.*
+
+*Lưu ý: hình dùng tỉ lệ `v_thay_the_1 / v_huyet_tuong_1` (trung bình 1.45 và 1.42) làm biến lượng dịch thay, nên tỉ số ở mô hình 2 và 3 lệch 0.00–0.01 so với bảng trên; kết luận không đổi.*
+
 ### Bảng F. Độ vững của tỉ lệ giảm TG (%) khi đổi cách tính
 
 |Kịch bản                                 |n albumin; FFP |Albumin 5%         |FFP                |p     |Kiểm định |
@@ -619,4 +665,8 @@ Mỗi bảng đặt kết quả từ dữ liệu cạnh số của luận án (c
 |Chung, theo `tg_giam` như luận án        |59; 34         |76.1 (9.7 – 95.8)  |80.8 (43.6 – 96.5) |0.175 |Wilcoxon  |
 
 *`TG_0` khác `tg_NV` ở 10 ca. STT 7 và 62 trùng tuổi, giới, `tg_NV`, `tg_2`, Hct, APACHE II, máy và giờ TPE lần 1; STT 14 và 60 trùng tuổi, giới, `tg_NV` và dịch. Chưa xác định được ca nào đúng, cần đối chiếu hồ sơ gốc. STT 44 và 66 lọc 5 giờ, thay 3850–4000 mL nhưng TG chỉ giảm 9.7% và 2.2%, thấp bất thường so với lượng dịch đã thay; lần 2 vẫn giảm 82% và 75%.*
+
+![Phân tích độ vững](image/poster/f10_sensitivity.png)
+
+*Hình F. Tỉ lệ giảm TG của hai nhóm qua 11 kịch bản tính toán, kèm p từng kịch bản. Không kịch bản nào cho p < 0.05: kết luận không phụ thuộc vào lựa chọn phân tích.*
 
